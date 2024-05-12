@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    Left: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+    header .logo {
+        position: relative;
+        top: -75px;
+        left: -50px;
+        max-width: 350px;
+    }
+
+.chat-image {
+    border-radius: 100px;
+}
+
+div .img01 {
+    position: absolute;
+    left: -550px;
+}
+
+div .img01 .dm1 {
+    object-position: top left;
+    width: 100px;
+    height: 100px;
+}
+
+.navigation {
+    position: relative;
+    width: 450px;   
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.navigation ul {
+    position: relative;
+    display: flex;
+    width: 350px;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    font-size: 1.5em;
+    line-height: 75px;
+    transform: 0.5s;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.navigation ul li:hover a .icon {
+    color: rgba(255, 255, 255, 1);
+    transition: 0.25s;
+}
+
+.navigation ul li.active a .icon {
+    transform: translateY(-8px);
+    color: #ffd700;
+}
+
+.navigation ul li a .text {
+    position: absolute;
+    opacity: 0;
+    font-weight: 400;
+    font-size: 0.5em;
+    color: #ffffff;
+    transition: 0.5s;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transform: translateY(0px);
+}
+
+.navigation ul li.active a .text {
+    transform: translateY(13px);
+    opacity: 1;
+}
+
+.indicator {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.indicator::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    bottom: 13px;
+    width: 80%;
+    height: 14px;
+    background: #ffd700;
+    border-radius: 10px;
+    }
+
+.navigation ul li:nth-child(2).active ~ .indicator {
+    transform: translateX(calc(76px * 1));
+}
+
+.navigation ul li:nth-child(3).active ~ .indicator {
+    transform: translateX(calc(76px * 2));
+}
+
+.navigation ul li:nth-child(4).active ~ .indicator {
+    transform: translateX(calc(76px * 3));
+}
+
+.navigation ul li:nth-child(5).active ~ .indicator {
+    transform: translateX(calc(76px * 4));
+}
